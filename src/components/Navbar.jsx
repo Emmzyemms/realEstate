@@ -18,21 +18,21 @@ const Navbar = () => {
 
   return (
     <div className="absolute top-0 left-0 w-full z-10">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent">
+      <div className="container mx-auto fixed top-0 flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent">
         <img src={assets.logo} alt="logo" />
 
         {/* -----Desktop-menu---- */}
-        <ul className="hidden  md:flex gap-7 text-white">
-          <a href="#Header" className="cursor-pointer hover:text-gray-400">
+        <ul className="hidden  md:flex gap-7 text-gray-300">
+          <a href="#Header" className="cursor-pointer hover:text-white">
             Home
           </a>
-          <a href="#About" className="cursor-pointer hover:text-gray-400">
+          <a href="#About" className="cursor-pointer hover:text-white">
             About
           </a>
-          <a href="#Projects" className="cursor-pointer hover:text-gray-400">
+          <a href="#Projects" className="cursor-pointer hover:text-white">
             Projects
           </a>
-          <a href="#Testimonials" className="cursor-pointer hover:text-gray-400">
+          <a href="#Testimonials" className="cursor-pointer hover:text-white">
             Testimonials
           </a>
         </ul>
@@ -43,7 +43,7 @@ const Navbar = () => {
         <img
           onClick={() => setShowMobileMenu(true)}
           src={assets.menu_icon}
-          className="md:hidden w-7 cursor-pointer"
+          className="md:hidden w-7  cursor-pointer"
           alt="menu-open"
         />
       </div>

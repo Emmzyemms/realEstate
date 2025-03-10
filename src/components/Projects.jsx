@@ -9,7 +9,7 @@ const Projects = () => {
 
   useEffect(() => {
     const updateCardsToShow = () => {
-      if ((window, innerWidth >= 1042)) {
+      if (window.innerWidth >= 1206) {
         setCardsToShow(projectsData.length);
       } else {
         setCardsToShow(1);
@@ -46,11 +46,10 @@ const Projects = () => {
         </span>
       </h1>
       <p className="text-center text-gray-500 mb-8 max-w-80 mx-auto">
-        Crafting Spaces, Building Legacies-Explore Our Porfolio
+        Crafting Spaces, Building Legacies - Explore Our Portfolio
       </p>
 
-      {/* slider button */}
-
+      {/* Slider buttons */}
       <div className="flex justify-end items-center mb-8">
         <button
           onClick={PrevProject}
@@ -62,7 +61,7 @@ const Projects = () => {
 
         <button
           onClick={nextProject}
-          className="p-3 bg-gray-200 rounded mr-2 cursor-pointer"
+          className="p-3 bg-gray-200 rounded cursor-pointer"
           aria-label="Next Project"
         >
           <img src={assets.right_arrow} alt="Next" />
@@ -70,19 +69,22 @@ const Projects = () => {
       </div>
 
       {/* Projects slider container */}
-      <div className="overflow-hidden">
+      <div className="w-full overflow-hidden">
         <div
-          className="flex gap-8 transform duration-500 ease-in-out"
+          className="flex sm:gap-3 transition-transform duration-500 ease-in-out"
           style={{
-            transform: `translateX(-${(currentIdex * 100) / cardsToShow}%)`,
+            transform: `translateX(-${currentIdex * 100}%)`,
           }}
         >
           {projectsData.map((project, index) => (
-            <div key={index} className="relative flex-shrink-0 w-full sm:w-1/4">
+            <div
+              key={index}
+              className="relative flex-shrink-0 w-full sm:w-1/3  "
+            >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-auto mb-14 "
+                className="w-full h-fit object-cover sm: mb-14"
               />
               <div className="absolute left-0 right-0 bottom-5 flex justify-center">
                 <div className="inline-block bg-white w-3/4 px-4 py-2 shadow-md">
