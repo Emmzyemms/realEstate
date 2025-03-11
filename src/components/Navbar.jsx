@@ -18,21 +18,24 @@ const Navbar = () => {
 
   return (
     <div className="absolute top-0 left-0 w-full z-10">
-      <div className="container mx-auto fixed top-0 flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent">
+      <div className="container mx-auto fixed top-0 flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-gray-900 opacity-50  ">
         <img src={assets.logo} alt="logo" />
 
         {/* -----Desktop-menu---- */}
-        <ul className="hidden  md:flex gap-7 text-gray-300">
-          <a href="#Header" className="cursor-pointer hover:text-white">
+        <ul className="hidden  md:flex gap-7 text-white">
+          <a href="#Header" className="cursor-pointer hover:text-gray-300">
             Home
           </a>
-          <a href="#About" className="cursor-pointer hover:text-white">
+          <a href="#About" className="cursor-pointer hover:text-gray-300">
             About
           </a>
-          <a href="#Projects" className="cursor-pointer hover:text-white">
+          <a href="#Projects" className="cursor-pointer hover:text-gray-300">
             Projects
           </a>
-          <a href="#Testimonials" className="cursor-pointer hover:text-white">
+          <a
+            href="#Testimonials"
+            className="cursor-pointer hover:text-gray-300"
+          >
             Testimonials
           </a>
         </ul>
